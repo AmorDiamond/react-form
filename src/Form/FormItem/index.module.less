@@ -1,0 +1,44 @@
+.formItemLayout {
+    background-color: #fff;
+    padding-left: 0.32rem;
+    padding-right: 0.32rem;
+    box-sizing: border-box;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        left: 0.32rem;
+        right: 0.32rem;
+        bottom: 0;
+        height: 0.02rem;
+        background-color: #e1e5ec;
+    }
+    .formItem {
+        display: flex;
+        align-items: center;
+        min-height: 1.04rem;
+        color: #040a23;
+        font-size: 0.32rem;
+    }
+    .label {
+        position: relative;
+        width: 2.06rem;
+        &.required::before {
+            content: '*';
+            color: #ca0e2d;
+            margin-right: 0.04rem;
+            margin-left: -0.16rem;
+        }
+    }
+    .control {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+    }
+    .error {
+        color: red;
+    }
+}
