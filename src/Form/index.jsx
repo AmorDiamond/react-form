@@ -3,8 +3,9 @@ import { isEmpty } from 'lodash-es';
 
 import FieldContext from './context';
 import useForm from './useForm';
+import FormItem from './FormItem';
 
-function Form(
+function FormComp(
     { children, form, onFinish, onFinishFailed, onValuesChange, hideErrorMsg, initialValues, className },
     ref
 ) {
@@ -35,4 +36,6 @@ function Form(
     );
 }
 
-export default forwardRef(Form);
+const Form = forwardRef(FormComp);
+Form.Item = FormItem;
+export default Form;
